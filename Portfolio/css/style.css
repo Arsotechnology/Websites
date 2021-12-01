@@ -1,0 +1,431 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+@-ms-viewport {
+  width: device-width ;
+}
+
+body, html {
+    height: 100%;
+}
+
+
+.img1 {
+    /* The image used */
+    background-image: url('../images/background_dog.png');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img2 {
+	 background-image: url('../images/sit.jpg');
+
+    /* Full height */
+    height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img3 {
+	 background-image: url('../images/design1.jpg');
+
+    /* Full height */
+    height: 300px;
+	width:100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img4 {
+	 background-image: url('../images/yanyan.jpg');
+
+    /* Full height */
+    height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img5 {
+    /* The image used */
+    background-image: url('../images/background_dog.png');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*================
+	Nav
+=================*/
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+	color:white;
+	text-shadow: 2px 2px black;
+	text-decoration: none;
+}
+.nav a:hover {
+	text-decoration: underline;
+}
+.menu {
+	
+	position:fixed;
+	width: 100%;
+}
+#top {
+	margin-bottom: o;
+}
+/*===============
+	CAPTIONs
+===============*/
+.caption {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width:100%;
+	font-size: 25px;
+	letter-spacing:10px;
+	text-align: center;
+	color: #000;
+	
+	text-shadow: 2px 2px #FF0000;
+}
+caption h1 {
+	text-shadow: 2px 2px #FF0000;
+}
+.logo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+	padding-top: 50px;
+	
+}
+
+/*===============
+	Bio
+================*/
+#bio{
+
+	background-color:darkgray;
+	margin-top: 0;
+	opacity: 1.00;
+	
+}
+#bio p {
+	max-width: 100%;
+	padding-top: 25px;
+	padding-left:25px;
+	font-size: 20px;
+	
+}	
+h1 {
+	text-shadow: 2px 2px #FF0000;
+	font-size:25px;
+	letter-spacing: 8px;
+	text-align: center;
+	margin-top:0;
+	margin-bottom:0;
+	padding: 20px;
+}
+#img-profile {
+	float: left;
+	padding-top: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 40px;
+	
+}
+.container-1 {
+	background-color: darkgray;
+	margin-top:0;
+	opacity: 3.00;
+	overflow: hidden;
+	
+}
+
+/*===============
+	Websites
+================*/
+
+hr {
+	margin: 0 auto;
+	width: 80%;
+}
+
+#website1 {
+	height: 200px;
+	width: 235px;
+}
+.left {
+	float:left;
+	max-width:33.3%;
+	max-height: 500px;
+	padding:30px;
+}
+.right {
+	float: right;
+	max-width:33.3%;
+	max-height: 500px;
+	padding: 30px;
+}
+.center {
+	margin:0 auto;
+	padding: 30px;
+	max-width:33.3%;
+	max-height: 500px;
+	display: inline-block;
+}
+.container {
+	background-color: gray;
+	margin-top:0;
+	opacity: 2.00;
+	text-align:center;
+	padding-left:30px;
+	padding-right: 30px;
+	padding-top: 0px;
+	padding-bottom:55px;
+}
+/*===============
+	Logos
+================*/
+.container-2 {
+	background-color: darkgray;
+	margin-top:0;
+	opacity: 3.00;
+	text-align:center;
+	padding-left:30px;
+	padding-right: 30px;
+	padding-top: 0px;
+	padding-bottom:65px;
+}
+
+/*===============
+	Artwork
+================*/
+.container-3 {
+	background-color: gray;
+	margin-top:0;
+	
+	opacity: 4.00;
+	text-align:center;
+	padding-left:30px;
+	padding-right: 30px;
+	padding-top: 0px;
+	padding-bottom:30px;
+}
+/*===============
+	Footer
+================*/
+.footer {
+	text-align:center;
+	bottom:0;
+	width:100%
+}
+.thank-you {
+	padding-top:23%;
+		
+}
+p {
+	max-width:250px;
+	text-align: left;
+	font-size: 18px;
+	
+	
+}
+.click {
+	margin-top: 0;
+	text-align: center;
+}
+@media screen and (max-width: 320px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+   #bio {
+	 
+  }
+  #bio p {
+	  font-size: 10px;
+	  padding: 5px 10px 5px 10px;
+  }
+  #website1 {
+	height: 100px;
+	width: 115px;
+}
+  .logo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	padding-top:100px;
+    width: 25%%;
+  }
+  #img-profile {
+	float: none;
+	width:35%;
+	display:block;
+	margin-left:auto;
+	margin-right: auto;
+	padding: 15px;
+	}
+	.left {
+		float: none;
+		margin:0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+		max-width:none;
+		
+	    max-height: none;
+	}
+	.right {
+		float: none;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+		max-width:none;
+	    max-height: none;
+	}
+	.center {
+		float: none;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+		max-width:none;
+	    max-height: none;
+	}
+	.left p {
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+	}
+	.right p {
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+	}
+	.center p {
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+	}
+	p {
+		font-size: 10px;
+	}
+  
+}
+@media screen and (max-width: 768px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+  #bio {
+	 
+  }
+  #bio p {
+	  font-size: 10px;
+	  padding: 5px 10px 5px 10px;
+  }
+   #website1 {
+	height: 100px;
+	width: 115px;
+}
+  .logo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	padding-top:100px;
+    width: 25%%;
+  }
+  #img-profile {
+	float: none;
+	width:35%;
+	display:block;
+	margin-left:auto;
+	margin-right: auto;
+	padding: 15px;
+	}
+	.left {
+		float: none;
+		margin:0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+		max-width:none;
+		
+	    max-height: none;
+	}
+	.right {
+		float: none;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+		max-width:none;
+	    max-height: none;
+	}
+	.center {
+		float: none;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+		max-width:none;
+	    max-height: none;
+	}
+	.left p {
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+	}
+	.right p {
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+	}
+	.center p {
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 0;
+	}
+	p {
+		font-size: 10px;
+	}
+}	
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
+  
+}
