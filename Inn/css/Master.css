@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* Main CSS */
+body{
+    background: pink; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(brown, pink); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(brown, pink); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(brown, pink); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(brown, pink); /* Standard syntax */
+   	background-repeat: round;
+	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+}
+/*
+==============================
+Header
+==============================
+*/
+header {
+	background-color: #076E3C;
+	border-radius: 25px;
+}
+.header-pos {
+	margin: auto;
+	padding: 0;
+	width: 960px;
+	height: 200px
+}
+h1 {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-family: 'Tangerine', serif ;
+	font-weight: 300;
+	font-size: 52px;
+}
+h3 {
+	text-align: center;
+	font-size: 20px
+}
+h3 a{
+	text-decoration: none;
+	color: black;
+}
+h3 a:hover{
+	color: #FFFFFF;
+	
+}
+.logo-pic {
+	float: left;
+}
+.logo-pic2 {
+	float: right;
+	border-radius: 25px;
+}
+/*
+===============================
+Navigation
+===============================
+*/
+nav {
+	position: inherit;
+	text-align: center;
+	font-size: 25px;
+	
+	
+}
+nav a {
+	padding: 0 20px 0 20px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:hover {
+	color: brown;
+}
+/*
+=============================
+Home Page Section
+=============================
+*/
+.section-home{
+	margin: 20px auto 0 auto;
+	padding: 0;
+	width: 960px;
+	height: auto;
+	background-color:  #ED1C24;
+	border-radius: 25px 25px 0 0;
+}
+.inn-pic {
+	padding: 25px 15px 10px 25px;
+	float: left;	
+}
+h2 {
+	text-align: center;
+	font-size: 45px;
+	font-family: 'Tangerine', serif;
+	padding-top: 25px;
+	font-weight: 600;
+}
+p {
+	font-size: 20px;
+	padding: 0 5px;
+}
+/*
+=============================
+Footer
+=============================
+*/
+footer {
+	text-align: center;
+	width: 960px;
+	padding: 0;
+	margin: 15px auto auto auto;
+	background-color: red;
+	border-radius: 0px 0px 25px 25px;
+}
+.footer-nav {
+	font-size: 15px
+}
+/*
+==============================
+Tour page
+=============================
+*/
+.video {
+	padding: 0;
+	margin: auto;
+	
+}
+h2 {
+	padding: 25px 0 0 0;
+	margin: 25px 0 0 0;
+}
+.video{
+	height: 625px;
+	width: auto;
+}
+/*
+===========================
+Room page
+==========================
+*/
+.border{
+		
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+    border-bottom-color: #FFFFFF;
+		
+}
+.images {
+	padding: 5px;
+	float: left;
+}
+/*
+============================
+Contact page
+=============================
+*/
+.list{
+	font-size: medium;
+}
+
+
+h4 {
+	text-align: center;
+	}
+.image1{
+	padding: 5px;
+	float: right;
+} 
+
+.policies{
+	padding: 5px;
+}
+
+/*
+=========================
+Table
+========================
+*/
+table {
+	border: 2px solid lightblue;
+	border-collapse: collapse;
+	padding: 5px;
+}
+thead, tr {
+	border-top: 2px solid lightblue;
+	border-bottom: 2px solid lightblue;
+}
+
+th, td {
+	padding: .2em 1em;
+	text-align: left;
+	}
+caption{
+	text-align: center;
+	font-size: 150%;
+	color: darkred;
+	background: lightblue;
+}	
+/*
+=========================
+popout
+========================
+*/
+ .pop:active{
+    width:500px ;
+    height:500px;
+    position:static;
+    right: -65px;
+    top: 200px ;
+    background-color:#000;
+ }
+.pop:hover{
+	border: thin;
+}
+.pop {
+	border-radius: 15%;
+}
