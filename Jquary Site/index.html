@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Music Site</title>
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<link rel="stylesheet" href="smartmenus/sm-core-css.css">
+	<link rel="stylesheet" href="smartmenus/sm-simple.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="smartmenus/jquery.smartmenus.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		
+	 $('.sm').smartmenus({
+     showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+     $ul.slideUp(250, complete); 
+    }
+	});
+	
+	$('nav ul li a').hover(
+			function() {
+				$(this).stop().animate( //
+					{
+						paddingRight: '2.5em'
+				}, 1000,);
+				},
+			function() {
+				$(this).stop().animate(
+					{
+						paddingRight: '1.2em'
+					}, 1000,);			
+				});  //end nav hover
+	
+	})
+	</script>
+</head>
+	<div class="container">
+	<header>
+		<h1>James Karwacki's Music Page <img src="images/guitar.png" alt="guitar" id="logo"></h1>
+		
+	</header>
+	<nav class="main">
+		<ul class="sm sm-simple">
+  			<li><a href="index.html">Home</a></li>
+  			<li><a href="news.html">News</a></li>
+			<li><a href="gallery.html">Gallery</a>
+				<ul>
+					<li><a href="gallery.html">Pictures</a></li>
+					<li><a href="gallery.html">Instrument</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+           		</ul>
+			</li>
+  			<li><a href="contact.html">Contact</a></li>
+  			<li style="float:right"><a class="active" href="about.html">About</a></li>
+		</ul>
+	</nav>
+	<aside id="rightbar">
+	<h2>Music Sites</h2>
+		<div class="sites">
+		<p><a href="http://www.pandora.com" target="_blank">Panadora</a> </p>
+		<p><a href="http://www.spotify.com" target="_blank">Spotify</a> </p>
+		<p><a href="http://www.amazon.com/music" target="_blank">Amazon Music</a> </p>
+		</div>
+	</aside>
+	<aside id="leftbar">
+	<h2>MP3 Sites</h2>
+		<div class="sites">
+		<p><a href="http://www.apple.com/itunes/" target="_blank">iTunes</a> </p>
+		<p><a href="https://us.napster.com/" target="_blank">Napster</a> </p>
+		<p><a href="https://www.emusic.com/" target="_blank">eMusic</a> </p>
+		</div>
+	</aside>
+	<article id="content">
+	<h2> Welcome!<h2>
+		<div class="cite">
+		<p>Hello and welcome to my dynamic website that was designed with a theme of Music. The colors, images, and typography choices of this site were all chosen with music in mind. For the colors, aqua and black in different variation are used. When thinking about music people often associate dark bold colors with music. For the images, different musical instruments are used, including the logo of a guitar. The main typography <b>‘Audiowide’</b> is used for the headings, this is musically themed font from Google Fonts. Where the dynamics comes into play is in the uses of jQuery, an open source scripting language based off of JavaScript. jQuery is used in the navigation is the from of a smartmenu to display links interactively. Again, this scripting language is used to animate the News page with different images, at first hidden, than displayed by the uses of the <b>mouse</b> by <em>clicking, hovering, and rollover</em> to create the feeling of playing music. Finally, jQuery is used for validation of the forms on the Contact page. By using it for this one can show errors in an interactive way to a visitor in separate areas of the page when the forms are not completed correctly. The hope of this website is that one enjoys the user experience while thinking of music.  </p>
+		</div>
+	</article>
+	<footer id="footer">
+	<small>&copy 2018 Arsotechnology Designs</small>
+	<p><a href="cite.html">Citations</a></p>
+	</footer>
+	</div>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Music Site</title>
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<link rel="stylesheet" href="smartmenus/sm-core-css.css">
+	<link rel="stylesheet" href="smartmenus/sm-simple.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="smartmenus/jquery.smartmenus.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		
+	 $('.sm').smartmenus({
+     showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+     $ul.slideUp(250, complete); 
+    }
+	});
+	
+	$('nav ul li a').hover(
+			function() {
+				$(this).stop().animate( //
+					{
+						paddingRight: '2.5em'
+				}, 1000,);
+				},
+			function() {
+				$(this).stop().animate(
+					{
+						paddingRight: '1.2em'
+					}, 1000,);			
+				});  //end nav hover
+	
+	})
+	</script>
+</head>
+	<div class="container">
+	<header>
+		<h1>James Karwacki's Music Page <img src="images/guitar.png" alt="guitar" id="logo"></h1>
+		
+	</header>
+	<nav class="main">
+		<ul class="sm sm-simple">
+  			<li><a href="index.html">Home</a></li>
+  			<li><a href="news.html">News</a></li>
+			<li><a href="gallery.html">Gallery</a>
+				<ul>
+					<li><a href="gallery.html">Pictures</a></li>
+					<li><a href="gallery.html">Instrument</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+           		</ul>
+			</li>
+  			<li><a href="contact.html">Contact</a></li>
+  			<li style="float:right"><a class="active" href="about.html">About</a></li>
+		</ul>
+	</nav>
+	<aside id="rightbar">
+	<h2>Music Sites</h2>
+		<div class="sites">
+		<p><a href="http://www.pandora.com" target="_blank">Panadora</a> </p>
+		<p><a href="http://www.spotify.com" target="_blank">Spotify</a> </p>
+		<p><a href="http://www.amazon.com/music" target="_blank">Amazon Music</a> </p>
+		</div>
+	</aside>
+	<aside id="leftbar">
+	<h2>MP3 Sites</h2>
+		<div class="sites">
+		<p><a href="http://www.apple.com/itunes/" target="_blank">iTunes</a> </p>
+		<p><a href="https://us.napster.com/" target="_blank">Napster</a> </p>
+		<p><a href="https://www.emusic.com/" target="_blank">eMusic</a> </p>
+		</div>
+	</aside>
+	<article id="content">
+	<h2> Come Again!<h2>
+		<div class="cite">
+		<p> Thank you for visiting our site!<br> 
+			<h2 style="padding:0px; margin:0px">Arsotechnology Designs</h2><br>
+			Address:<br>
+			111 June Way<br>
+			Easton, MD 21601<br>
+			Phone:<br>
+			410-555-5555
+		</p>
+		</div>
+	</article>
+	<footer id="footer">
+	<small>&copy 2018 Arsotechnology Designs</small>
+	<p><a href="cite.html">Citations</a></p>
+	</footer>
+	</div>
+
+<body>
+</body>
+</html>

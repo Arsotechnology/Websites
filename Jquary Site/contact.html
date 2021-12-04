@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Music Site</title>
+	<link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="smartmenus/sm-core-css.css">
+	<link rel="stylesheet" href="smartmenus/sm-simple.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="smartmenus/jquery.smartmenus.min.js"></script>
+	<script src="jquery_validate/jquery.validate.min.js"></script>
+	<script>
+	$(document).ready(function() {
+	$('.sm').smartmenus({
+     showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+     $ul.slideUp(250, complete); 
+    }
+	});
+	
+	$('#form2').validate({
+   rules: {
+     email: {
+        required: true,
+        email: true
+     },
+     
+   }, //end rules
+   messages: {
+      email: {
+         required: "Please supply an e-mail address.",
+         email: "This is not a valid email address."
+       },
+     
+   },
+   errorPlacement: function(error, element) { 
+       if ( element.is(":radio") || element.is(":checkbox")) {
+          error.appendTo( element.parent()); 
+        } else {
+          error.insertAfter(element);
+        } 
+    } 
+
+  }); // end validate 
+	
+	$('nav ul li a').hover(
+			function() {
+				$(this).stop().animate( //
+					{
+						paddingRight: '2.5em'
+					}, 1000,);
+				},
+			function() {
+				$(this).stop().animate(
+					{
+						paddingRight: '1.2em'
+					}, 1000,);			
+				});  //end nav hover
+	
+	})
+	
+	</script>
+	
+	<script type="text/javascript">
+	
+	function validateForm(){
+		//alert("Success");
+		var name = document.getElementById("name").value;
+		var age = document.getElementById("age").value;
+		if(name == "" || name == null) {
+			resultsMsg("We need your name please");
+		}else{
+			//alert("Thank you" + name);
+			if(age == "" || age ==null || isNaN(age)){
+				resultsMsg("please enter a numer for your the year");
+			}else{
+				//alert("thanks" + name + "You are" + age + "--yeah, right!");
+				if(!getSkill()){
+					resultsMsg("Please select a Music Genre");
+				}else{
+				moreMsg( name + "you like" + getSkill() + "during the year" + age);
+				}
+			}
+		}
+	}// end function
+	
+	function getSkill(){
+		var isChecked = false;
+		var theSelection;
+		var skills = document.getElementsByName('skillset');
+		for (var i=0; i < skills.length; i++){
+			if(skills[i].checked){
+				isChecked = true;
+				theSelection = skills[i].value;
+				break;
+			}
+		}
+		if(isChecked){
+			return theSelection;
+		}else{
+			return false;
+		}
+	}
+	
+	function resultsMsg(s){
+	var resultsBox = document.getElementById("results");
+	resultsBox.innerHTML = s;
+	}
+	function moreMsg(s){
+	var resultsBox = document.getElementById("more");
+	resultsBox.innerHTML = s;
+	}
+</script>
+</head>
+	<div class="container">
+	<header>
+		<h1>James Karwacki's Music Page <img src="images/guitar.png" alt="guitar" id="logo"></h1>
+	</header>
+	<nav>
+		<ul class="sm sm-simple">
+  			<li><a href="index.html">Home</a></li>
+  			<li><a href="news.html">News</a></li>
+			<li><a href="gallery.html">Gallery</a>
+				<ul>
+					<li><a href="gallery.html">Pictures</a></li>
+					<li><a href="gallery.html">Instrument</a></li>
+					<li><a href="gallery.html">Gallery</a></li>	
+           		</ul>
+			</li>
+  			<li><a href="contact.html">Contact</a></li>
+  			<li style="float:right"><a class="active" href="about.html">About</a></li>
+		</ul>
+	</nav>
+	<aside id="rightbar">
+	<h2>Music Sites</h2>
+		<div class="sites">
+		<p><a href="http://www.pandora.com" target="_blank">Panadora</a> </p>
+		<p><a href="http://www.spotify.com" target="_blank">Spotify</a> </p>
+		<p><a href="http://www.amazon.com/music" target="_blank">Amazon Music</a> </p>
+		</div>
+	</aside>
+	<aside id="leftbar">
+	<h2>MP3 Sites</h2>
+		<div class="sites">
+		<p><a href="http://www.apple.com/itunes/" target="_blank">iTunes</a> </p>
+		<p><a href="https://us.napster.com/" target="_blank">Napster</a> </p>
+		<p><a href="https://www.emusic.com/" target="_blank">eMusic</a> </p>
+		</div>
+	</aside>
+	<article id="content">
+	<h2> Form<h2>
+<form name="form1" id="form1" action="" method="post">
+	<label>First Name:
+		<input for="name" type="text" id="name" name="name">
+	</label>
+	<br>
+	
+	<label>Music Year: &nbsp
+		<input type="text" id="age" name="age">
+	</label>
+	<br>
+	<input type="radio" name="skillset" value="Rock Music">Rock Music<br>
+	<input type="radio" name="skillset" value="Pop Music">Pop Music<br>
+	<input type="radio" name="skillset" value="Reggae Music">Reggae Music<br>
+	<input type="radio" name="skillset" value="Hip Hop Music">Hip Hop Music<br>
+	
+	<input type="button" value="Submit" onclick="validateForm();">&nbsp; &nbsp <input type="reset" value="Clear Form">
+</form>
+
+	<div id="results"></div>
+	<div id="more">Results</div>
+	<div>
+	<h1> Get Our News Letter</h1>
+	</div>
+	<form name="form2" id="form2" action="" method="post">
+	       <div>
+				<label for="email" class="label">E-mail Address</label>
+				<input name="email" type="text" id="email">
+			</div>
+			<div>
+				<input type="submit" name="submit" id="submit" value="Submit">
+			</div>
+	</form>
+	</article>
+	<footer id="footer">
+	<small>&copy 2018 Arsotechnology Designs</small>
+	<p><a href="cite.html">Citations</a></p>
+	</footer>
+	</div>
+
+<body>
+</body>
+</html>
